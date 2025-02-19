@@ -5,7 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'node:path';
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/zzz-builds' : '/',
   plugins: [
     tailwindcss(),
     TanStackRouterVite({ autoCodeSplitting: true }),
@@ -16,4 +17,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-});
+}));
