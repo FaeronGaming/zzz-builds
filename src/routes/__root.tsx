@@ -1,5 +1,6 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
+import { Separator } from '@/components/ui/separator';
 
 export const Route = createRootRoute({
   component: () => (
@@ -9,7 +10,7 @@ export const Route = createRootRoute({
           Home
         </Link>
       </div>
-      <hr />
+      <Separator className="my-0.5" />
       <Outlet />
       <TanStackRouterDevtools />
     </>
