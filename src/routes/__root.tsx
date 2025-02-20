@@ -12,7 +12,7 @@ export const Route = createRootRoute({
       </div>
       <Separator className="my-0.5" />
       <Outlet />
-      {import.meta.env.PROD && <TanStackRouterDevtools />}
+      {import.meta.env.DEV && <TanStackRouterDevtools />}
     </>
   ),
 });
